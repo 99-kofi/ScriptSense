@@ -2,3 +2,4 @@ streamlit
 opencv-python
 numpy
 Pillow
+google-generativeai
