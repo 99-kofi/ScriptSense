@@ -14,7 +14,7 @@ st.set_page_config(page_title="ScriptSense AI", layout="wide")
 # Create a .streamlit/secrets.toml file with:
 # GEMINI_API_KEY = "your_actual_api_key"
 try:
-    GEMINI_API_KEY = st.secrets["GEMINI_API_KEY1"]
+    GEMINI_API_KEY = st.secrets.get(["GEMINI_API_KEY1"])
 except (FileNotFoundError, KeyError):
     # Option 2: Use environment variable (good for local development)
     GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY1")
